@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "2083562c-a2fa-4e0b-8848-caeba2b68b9e",
+		"name": "Ikigai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ikigai provider test transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction_time\": \"1603711958\",\r\n    \"id\": \"e0c523cd-3dfd-4206-83b4-9c0dc32dd77e\",\r\n    \"event\": \"in-store-txn\",\r\n    \"value\": 13.98,\r\n    \"status\": \"complete\",\r\n    \"customer_id\": \"e0c523cd-3dfd-4206-83b4-9c0dc32dd77e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ikigai.loc/api_v1/webhook/log/1",
+					"protocol": "http",
+					"host": [
+						"ikigai",
+						"loc"
+					],
+					"path": [
+						"api_v1",
+						"webhook",
+						"log",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bank one provider test transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction_time\": \"2020-10-02T12-23-12\",\r\n    \"id\": \"34523123976\",\r\n    \"event_id\": 27,\r\n    \"value\": 27,\r\n    \"status\": \"complete\",\r\n    \"customer_id\": \"e0c523cd-3dfd-4206-83b4-9c0dc32dd77e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ikigai.loc/api_v1/webhook/log/2",
+					"protocol": "http",
+					"host": [
+						"ikigai",
+						"loc"
+					],
+					"path": [
+						"api_v1",
+						"webhook",
+						"log",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bank two provider test transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction_time\": \"2020-10-02T12-23-12\",\r\n    \"id\": \"34523123974\",\r\n    \"event_id\": 27,\r\n    \"value\": 27,\r\n    \"status\": \"complete\",\r\n    \"customer_id\": \"e0c523cd-3dfd-4206-83b4-9c0dc32dd77e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ikigai.loc/api_v1/webhook/log/3",
+					"protocol": "http",
+					"host": [
+						"ikigai",
+						"loc"
+					],
+					"path": [
+						"api_v1",
+						"webhook",
+						"log",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
